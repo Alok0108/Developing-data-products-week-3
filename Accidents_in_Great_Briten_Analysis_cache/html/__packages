@@ -1,0 +1,9 @@
+base
+ggplot2
+plotly
+data.table
+dplyr
+tidyr
+lubridate
+zoo
+bindrcpp
