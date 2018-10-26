@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE, cache = TRUE, echo = FALSE,
 
 - The goal of the project is to create a web page presentation using R Markdown that features a plot created with Plotly, and to host the resulting web page on either GitHub Pages, RPubs, or NeoCities.
 
-- The interactive plot on the next slide represents the number of road accidents in Great Britain from 2005 to 2015, grouped by severity (slight, serious, or fatal).
+- The interactive plot on the next slide represents the number of road accidents in Great Britain from 2016 to 2018, grouped by severity (slight, serious, or fatal).
 
     + A Loess smoother line has been added to highlight the overall evolution of the number of accidents.
 
@@ -35,14 +35,14 @@ library(zoo)
 # The source data sets are not included in this repository.
 # To reproduce this presentation, you will first need to download the two
 # following zipped data sets:
-# - All STATS19 data (accident, casualties and vehicle tables) for 2005 to
-#   2014", from
-#   https://data.gov.uk/dataset/road-accidents-safety-data/resource/8ecee6ac-33fd-4f5b-8973-e900cc65d24a)
+# - All STATS19 data (accident, casualties and vehicle tables) for 2016 to
+#   2017", from
+#   http://data.dft.gov.uk.s3.amazonaws.com/road-accidents-safety-data/dftRoadSafetyData_Accidents_2017.zip)
 # - Road Safety - Accidents 2015, from
-#   https://data.gov.uk/dataset/road-accidents-safety-data/resource/ceb00cff-443d-4d43-b17a-ee13437e9564)
-# Then extract the `Accidents0514.csv` and `Accidents_2015.csv` files from
+#   http://data.dft.gov.uk/road-accidents-safety-data/dftRoadSafety_Accidents_2016.zip)
+# Then extract the `Acc.csv` and `dftRoadSafety_Accidents_2016.csv` files from
 # the zip files in a subdirectory named `data`.
-# read data for 2005-2014 and 2015 as data tables and keep only severity and
+# read data for 2016 and 2017 as data tables and keep only severity and
 # date columns
 accidents_2017 <- fread("../data/Acc.csv", header = TRUE, 
                        sep = ",")
@@ -117,8 +117,8 @@ plot_ly(accident_count) %>%
 
 ### Source code
 
-- The R Markdown source code of this presentation can be found in [this GitHub repository](https://github.com/spujadas/coursera-ddp-plotly).
+- The R Markdown source code of this presentation can be found in [this GitHub repository](https://github.com/Alok0108/Developing-data-products-week-3).
 
 ### Data source and licence
 
-- This project uses the [road safety data set](https://data.gov.uk/dataset/road-accidents-safety-data), released by the United Kingdom's Department for Transport under the [Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
+- This project uses the [road safety data set](https://data.gov.uk/dataset/cb7ae6f0-4be6-4935-9277-47e5ce24a11f/road-safety-data), released by the United Kingdom's Department for Transport under the [Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
